@@ -1,0 +1,81 @@
+@import "font.css";
+/*global vars*/
+$main_color1: #DB4437;
+$main_color2: #3CB878;
+$title: #fff;
+$text: #a6a6a6;
+$background: #222627;
+/*global vars end*/
+header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: $title;
+  background: $main_color1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  div {
+    flex: 1;
+    img {
+      width: 20px;
+    }
+  }
+  nav {
+    flex: 1;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      li {
+        list-style: none;
+        a {
+          color: $title;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  background: $background;
+  font-family: 'Roboto', sans-serif;
+}
+
+.trending_news {
+  &--image {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .trending_news--date {
+      position: absolute;
+      background: $background;
+      font-size: 14px;
+      font-weight: normal;
+      color: $title;
+      padding: 6px 10px;
+    }
+  }
+  &--title {
+    color: $title;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &--social {
+    a {
+      i {
+        margin-right: 5px;
+      }
+      color: $text;
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 20px;
+    }
+  }
+}
