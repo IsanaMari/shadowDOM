@@ -46,20 +46,69 @@ body {
   background: $background;
   font-family: 'Roboto', sans-serif;
 }
+.title{
+  h1{
+    text-align: center;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-image: linear-gradient(to right, $main_color1 0%, #fff 100%);
+    background-size: 150% 100%;
+  }
+}
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before{
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
 
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
 .trending_news {
   &--image {
-    position: relative;
-    img {
-      width: 100%;
-    }
+    //position: relative;
+    margin-bottom: 30px;
+    //width: 100%;
+    //height: 180px;
+    background-image: url("https://picsum.photos/400/400/?random");
+    //background-position: 50% 50%;
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    @include aspect-ratio(16,9);
+
+
+    /***/
+
     .trending_news--date {
       position: absolute;
+      bottom: 25px;
+      right: 25px;
       background: $background;
       font-size: 14px;
       font-weight: normal;
       color: $title;
       padding: 6px 10px;
+      margin: 0;
     }
   }
   &--title {
