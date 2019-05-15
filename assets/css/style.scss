@@ -20,11 +20,12 @@ header {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 2rem;
-  div {
+  padding: 0 2rem;
+  a {
     flex: 1;
     img {
-      width: 20px;
+      height: 50px;
+      padding: 5px 0;
     }
   }
   nav {
@@ -33,14 +34,53 @@ header {
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: space-around;
+      //justify-content: space-around;
       li {
         list-style: none;
-        a {
-          color: $title;
-          &:hover {
+        position: relative;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        text-align: center;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in-out .2s;
+        &:after{
+          content: '';
+          height: 3px;
+          width: 0;
+          background: $main_color2;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transition: all ease-in-out .2s;
+        }
+        &:hover {
+          a{
             text-decoration: none;
+            color: $title;
           }
+          &:after {
+            content: '';
+            height: 3px;
+            width: 100%;
+            background: $main_color2;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+        a {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $title;
         }
       }
     }
@@ -149,7 +189,7 @@ body {
     height: 1px;
     margin: 0 auto;
     position: relative;
-    &:after{
+    &:after {
       width: 60px;
       height: 2px;
       background: $main_color1;
@@ -182,12 +222,12 @@ body {
   &--content {
     padding-left: 20px;
     .latest_news--title {
-      a{
+      a {
         font-size: 14px;
         font-weight: 700;
         color: $title;
         margin-bottom: 5px;
-        &:hover{
+        &:hover {
           text-decoration: none;
           color: $main_color1;
         }

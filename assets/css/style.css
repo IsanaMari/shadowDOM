@@ -13,24 +13,59 @@ header {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 2rem; }
-  header div {
+  padding: 0 2rem; }
+  header a {
     flex: 1; }
-    header div img {
-      width: 20px; }
+    header a img {
+      height: 50px;
+      padding: 5px 0; }
   header nav {
     flex: 1; }
     header nav ul {
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: space-around; }
+      display: flex; }
       header nav ul li {
-        list-style: none; }
-        header nav ul li a {
+        list-style: none;
+        position: relative;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        text-align: center;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in-out .2s; }
+        header nav ul li:after {
+          content: '';
+          height: 3px;
+          width: 0;
+          background: #3CB878;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transition: all ease-in-out .2s; }
+        header nav ul li:hover a {
+          text-decoration: none;
           color: #fff; }
-          header nav ul li a:hover {
-            text-decoration: none; }
+        header nav ul li:hover:after {
+          content: '';
+          height: 3px;
+          width: 100%;
+          background: #3CB878;
+          position: absolute;
+          bottom: 0;
+          left: 0; }
+        header nav ul li a {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff; }
 
 body {
   background: #222627;
