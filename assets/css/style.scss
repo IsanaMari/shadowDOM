@@ -21,11 +21,36 @@ header {
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  a {
+  .menu_btn{
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    div{
+      transition: all ease-in-out .2s;
+      margin: 5px auto;
+      width: 100%;
+      background: $title;
+      height: 4px;
+    }
+    &.active{
+      div{
+        opacity: 0;
+      }
+      .middle{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        opacity: 1;
+      }
+    }
+  }
+  div{
     flex: 1;
-    img {
-      height: 50px;
-      padding: 5px 0;
+    a {
+      img {
+        height: 50px;
+        padding: 5px 0;
+      }
     }
   }
   nav {
@@ -49,7 +74,7 @@ header {
         justify-content: center;
         align-items: center;
         transition: all ease-in-out .2s;
-        &:after{
+        &:after {
           content: '';
           height: 3px;
           width: 0;
@@ -60,7 +85,7 @@ header {
           transition: all ease-in-out .2s;
         }
         &:hover {
-          a{
+          a {
             text-decoration: none;
             color: $title;
           }
@@ -241,6 +266,43 @@ body {
         color: $text;
         i {
           margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+/*Large*/
+@media (max-width: 992px) {
+
+}
+
+/*Medium*/
+@media (max-width: 767px) {
+  header{
+    display: block;
+    &.open{
+      position: fixed;
+      z-index: 1;
+      width: 100%;
+      height: 100vh;
+    }
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .menu_btn{
+      display: block;
+    }
+    nav{
+      ul{
+        display: block;
+        li{
+          text-align: left;
+          a{
+            justify-content: unset;
+          }
         }
       }
     }
