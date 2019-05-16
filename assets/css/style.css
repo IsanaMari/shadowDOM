@@ -154,6 +154,10 @@ body {
 
 .heading {
   margin-bottom: 30px; }
+  .heading.heading_centered p {
+    text-align: center; }
+  .heading.heading_centered .line:after {
+    left: calc(50% - 30px) !important; }
   .heading p {
     font-size: 24px;
     font-weight: 700;
@@ -178,14 +182,29 @@ body {
 .carousel {
   display: flex; }
   .carousel--selected {
-    width: 70%; }
+    width: 65%; }
     .carousel--selected img {
       width: 100%; }
   .carousel--items {
     padding-left: 20px;
-    width: 30%; }
-    .carousel--items img {
-      width: 100%; }
+    width: 35%;
+    color: #fff;
+    font-size: 12px; }
+    .carousel--items div {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 15px; }
+      .carousel--items div img {
+        width: 50%;
+        padding-right: 10px; }
+      .carousel--items div p {
+        width: 50%; }
+
+.left_bar {
+  border: 1px solid #393c3d;
+  border-radius: 3px;
+  padding: 40px 15px; }
 
 .right_bar {
   border: 1px solid #393c3d;

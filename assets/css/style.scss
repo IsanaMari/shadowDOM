@@ -6,6 +6,25 @@ $title: #fff;
 $text: #a6a6a6;
 $background: #222627;
 $border: #393c3d;
+
+@mixin ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 /*global vars end*/
 * {
   font-family: 'Roboto', sans-serif;
@@ -137,24 +156,6 @@ body {
   }
 }
 
-@mixin ratio($width, $height) {
-  position: relative;
-  &:before {
-    display: block;
-    content: " ";
-    width: 100%;
-    padding-top: ($height / $width) * 100%;
-  }
-
-  > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-}
-
 .trending_news {
   &--image {
     margin: 0;
@@ -213,6 +214,16 @@ body {
 
 .heading {
   margin-bottom: 30px;
+  &.heading_centered {
+    p{
+      text-align: center;
+    }
+    .line {
+      &:after {
+        left: calc(50% - 30px) ;
+      }
+    }
+  }
   p {
     font-size: 24px;
     font-weight: 700;
@@ -241,18 +252,36 @@ body {
 .carousel {
   display: flex;
   &--selected {
-    width: 70%;
-    img{
+    width: 65%;
+    img {
       width: 100%;
     }
   }
   &--items {
     padding-left: 20px;
-    width: 30%;
-    img{
-      width: 100%;
+    width: 35%;
+    color: $title;
+    font-size: 12px;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      img {
+        width: 50%;
+        padding-right: 10px;
+      }
+      p {
+        width: 50%;
+      }
     }
   }
+}
+
+.left_bar {
+  border: 1px solid $border;
+  border-radius: 3px;
+  padding: 40px 15px;
 }
 
 .right_bar {
