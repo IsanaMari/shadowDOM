@@ -20,12 +20,6 @@ function opa() {
 }
 opa();
 
-// function scrolling() {
-//     window.onscroll = function (e) {
-//
-//     }
-// }
-
 function Slider( element ) {
     this.el = document.querySelector( element );
     this.init();
