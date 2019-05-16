@@ -144,20 +144,22 @@ body {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px; }
-.trending_news--social a {
-  color: #a6a6a6;
-  font-size: 14px;
-  font-weight: 500;
-  margin-right: 20px; }
-  .trending_news--social a i {
-    margin-right: 5px; }
+.trending_news--social {
+  margin-bottom: 30px; }
+  .trending_news--social a {
+    color: #a6a6a6;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 20px; }
+    .trending_news--social a i {
+      margin-right: 5px; }
 
 .heading {
   margin-bottom: 30px; }
   .heading.heading_centered p {
     text-align: center; }
   .heading.heading_centered .line:after {
-    left: calc(50% - 30px) !important; }
+    left: calc(50% - 30px); }
   .heading p {
     font-size: 24px;
     font-weight: 700;
