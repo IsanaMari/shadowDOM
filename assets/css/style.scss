@@ -21,22 +21,24 @@ header {
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  .menu_btn{
+  .menu_btn {
     display: none;
     cursor: pointer;
     width: 40px;
-    div{
+    div {
       transition: all ease-in-out .2s;
       margin: 5px auto;
       width: 100%;
       background: $title;
       height: 4px;
     }
-    &.active{
-      div{
+    &.active {
+      border: 2px solid $title;
+      border-radius: 50%;
+      div {
         opacity: 0;
       }
-      .middle{
+      .middle {
         width: 8px;
         height: 8px;
         border-radius: 50%;
@@ -44,7 +46,7 @@ header {
       }
     }
   }
-  div{
+  div {
     flex: 1;
     a {
       img {
@@ -279,32 +281,59 @@ body {
 
 /*Medium*/
 @media (max-width: 767px) {
-  header{
+  header {
     display: block;
-    &.open{
-      position: fixed;
-      z-index: 1;
+    height: 50px;
+    transition: all ease-in-out .3s;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    &.open {
       width: 100%;
       height: 100vh;
+      transition: all ease-in-out .3s;
+      background: $main_color1;
+      position: fixed;
+      nav {
+        display: block;
+      }
     }
-    div{
+    div {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
-    .menu_btn{
+    .menu_btn {
       display: block;
+      max-width: 40px;
     }
-    nav{
-      ul{
+    nav {
+      display: none;
+      ul {
         display: block;
-        li{
+        li {
           text-align: left;
-          a{
+          a {
             justify-content: unset;
+            z-index: 1;
+            font-size: 20px;
+          }
+          &:after {
+            bottom: 49%;
+            left: 0;
+          }
+          &:hover {
+            &:after {
+              bottom: 49%;
+              left: 0;
+              z-index: 0;
+            }
           }
         }
       }
     }
+  }
+  .container {
+    padding-top: 50px;
   }
 }
