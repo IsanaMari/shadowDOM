@@ -244,7 +244,8 @@ body {
 .left_bar {
   border: 1px solid #393c3d;
   border-radius: 3px;
-  padding: 40px 15px; }
+  padding: 40px 15px;
+  margin-bottom: 30px; }
 
 .right_bar {
   border: 1px solid #393c3d;
@@ -337,9 +338,12 @@ body {
   .container {
     padding-top: 50px; } }
 #slider {
-  margin: 15px auto;
+  margin: 0 auto;
   width: 100%;
   overflow: hidden; }
+  #slider .slider_heading {
+    display: flex;
+    justify-content: space-between; }
   #slider #slider-wrapper {
     height: 300px;
     width: 100%;
@@ -347,51 +351,46 @@ body {
     transition: left .4s linear;
     left: 0;
     display: -webkit-box; }
-
-.slide {
-  float: left;
-  width: 100%;
-  position: relative;
-  overflow: hidden; }
-
-.slide img {
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.caption {
-  margin: 0;
-  position: absolute;
-  z-index: 100;
-  bottom: -2em;
-  left: 0;
-  width: 100%;
-  height: 2em;
-  line-height: 2;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  transition: bottom 500ms ease-in; }
-
-.caption.visible {
-  bottom: 0; }
+    #slider #slider-wrapper .slide {
+      float: left;
+      width: 100%;
+      position: relative;
+      overflow: hidden; }
+      #slider #slider-wrapper .slide img {
+        position: absolute;
+        top: 0;
+        left: 0; }
+      #slider #slider-wrapper .slide .caption {
+        margin: 0;
+        position: absolute;
+        z-index: 100;
+        bottom: -100px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 2;
+        color: #fff;
+        transition: bottom .5s ease-in;
+        background: #000000aa;
+        padding-left: 15px;
+        padding-top: 15px; }
+        #slider #slider-wrapper .slide .caption.visible {
+          bottom: 0; }
 
 #slider-nav {
-  margin: 1em 0;
+  margin: 10px 0;
   text-align: center; }
-
-#slider-nav a {
-  width: 2em;
-  height: 2em;
-  border: 1px solid #ccc;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  display: inline-block;
-  line-height: 2;
-  margin-right: 0.5em; }
-
-#slider-nav a.current {
-  border-color: #000; }
+  #slider-nav a {
+    width: 2em;
+    height: 2em;
+    border: 1px solid #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    line-height: 2;
+    margin-right: 0.5em; }
+    #slider-nav a.current {
+      border-color: #393c3d; }
 
 /*# sourceMappingURL=style.css.map */
