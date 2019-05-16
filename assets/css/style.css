@@ -88,7 +88,7 @@ header {
           color: #fff; }
 
 body {
-  background: #222627;
+  background-color: #222627;
   font-family: 'Roboto', sans-serif; }
 
 .title h1 {
@@ -174,6 +174,18 @@ body {
       bottom: 0;
       left: 0;
       margin-left: 0; }
+
+.carousel {
+  display: flex; }
+  .carousel--selected {
+    width: 70%; }
+    .carousel--selected img {
+      width: 100%; }
+  .carousel--items {
+    padding-left: 20px;
+    width: 30%; }
+    .carousel--items img {
+      width: 100%; }
 
 .right_bar {
   border: 1px solid #393c3d;
