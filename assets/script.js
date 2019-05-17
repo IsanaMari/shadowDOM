@@ -239,8 +239,12 @@ function addMainNews() {
               box.setAttribute('image',image);
               /**/
               link.value = item.data.url;
-              // box.setAttributeNode(link);
-              // console.log(item.data.permalink)
+              box.setAttributeNode(link);
+              /**/
+              let day = item.data.created.toLocaleString()
+              date.value = item.data.created;
+              box.setAttributeNode(date);
+              console.log(day)
               /**/
               previous.disabled = index <= 0;
               next.disabled = index >= data.length - 1;
