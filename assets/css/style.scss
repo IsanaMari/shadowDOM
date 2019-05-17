@@ -478,7 +478,7 @@ body {
     justify-content: space-between;
   }
   #slider-wrapper {
-    height: 300px;
+    height: 350px;
     width: 100%;
     position: relative;
     transition: left .4s linear;
@@ -609,5 +609,48 @@ body {
         }
       }
     }
+  }
+}
+
+.send_letter{
+  p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: $text;
+  }
+  input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    font-size: 12px;
+    background: $border;
+    position: relative;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    color: $title;
+  }
+  button{
+    background-color: $main_color1;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: relative;
+    z-index: 1;
+    min-width: 160px;
+    height: 50px;
+    color: $title;
+    border-radius: 0;
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
   }
 }
