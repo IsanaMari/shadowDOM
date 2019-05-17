@@ -508,72 +508,75 @@ body {
   }
 }
 
-.main_news_image {
-  position: relative;
-  div {
-    @include ratio(16, 9)
-  }
-  span {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 14px;
-    color: $title;
-    background: $background;
-    padding: 6px 10px;
-  }
-}
-
-.main_news_content {
-  margin-bottom: 30px;
-  a {
-    h2 {
+.main_news {
+  .main_news_image {
+    position: relative;
+    div {
+      @include ratio(16, 9)
+    }
+    span {
+      position: absolute;
+      right: 35px;
+      top: 15px;
+      font-size: 14px;
       color: $title;
-      font-weight: 500;
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-    &:hover {
-      text-decoration: none;
-      h2 {
-        color: $main_color1;
-      }
+      background: $background;
+      padding: 6px 10px;
     }
   }
-  &--date {
-    font-size: 14px;
-    color: $border;
-    font-weight: 500;
-    margin-bottom: 8px;
-    i {
-      margin: 0 10px;
-      font-size: 8px;
-      vertical-align: middle;
-    }
-  }
-  &--text {
-    color: $text;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    margin-bottom: 8px;
-  }
-  &--links {
-    font-size: 14px;
+
+  .main_news_content {
+    margin-bottom: 30px;
     a {
-      margin-right: 20px;
-      color: $text;
-      i {
-        margin-right: 5px;
+      h2 {
+        color: $title;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 8px;
       }
       &:hover {
-        color: $main_color1;
         text-decoration: none;
+        h2 {
+          color: $main_color1;
+        }
+      }
+    }
+    &--date {
+      font-size: 14px;
+      color: $border;
+      font-weight: 500;
+      margin-bottom: 8px;
+      i {
+        margin: 0 10px;
+        font-size: 8px;
+        vertical-align: middle;
+      }
+    }
+    &--text {
+      color: $text;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 2;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      margin-bottom: 8px;
+    }
+    &--links {
+      font-size: 14px;
+      a {
+        margin-right: 20px;
+        color: $text;
+        i {
+          margin-right: 5px;
+        }
+        &:hover {
+          color: $main_color1;
+          text-decoration: none;
+        }
       }
     }
   }
