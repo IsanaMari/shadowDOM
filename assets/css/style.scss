@@ -122,7 +122,7 @@ header {
     }
   }
   div {
-    flex: 1;
+    flex: 0.5;
     a {
       img {
         height: 50px;
@@ -408,6 +408,9 @@ body {
 
 /*Medium*/
 @media (max-width: 767px) {
+  .title{
+    margin: 30px 0;
+  }
   header {
     display: block;
     height: 50px;
@@ -538,7 +541,8 @@ body {
   .main_news_image {
     position: relative;
     div {
-      @include ratio(16, 9)
+      @include ratio(16, 9);
+      background-repeat: no-repeat;
     }
     span {
       position: absolute;

@@ -9,7 +9,7 @@ class NewsPreview extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['image', 'date', 'title', 'author', 'text']
+    return ['image', 'date', 'title', 'author', 'text', 'link']
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
@@ -32,7 +32,7 @@ class NewsPreview extends HTMLElement {
           </div>
           <div class="col-lg-6 col-12">
             <div class="main_news_content">
-              <a href="#">
+              <a href="${this.getAttribute('link')}">
                 <h2>${this.getAttribute('title')}</h2>
               </a>
               <div class="main_news_content--date">
@@ -59,12 +59,33 @@ class NewsPreview extends HTMLElement {
 
   setStyle() {
     this.shadowStyles.textContent = `
+    .row{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+    .col-lg-6{
+      flex: 0 0 50%;
+      max-width: 50%;
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      box-sizing: border-box;
+    }
     .main_news .main_news_image {
         position: relative;
     }
     
     .main_news .main_news_image div {
         position: relative;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: 100%;
     }
     
     .main_news .main_news_image div:before {
@@ -172,13 +193,20 @@ function addMainNews() {
           let index = 0,
             previous = document.querySelector('.previous'),
             next = document.querySelector('.next'),
-            count = 5;
+            count = 3;
           let items = data.slice(0, count);
-          let container = document.body.appendChild(document.createElement('article'));
+          // let container = document.body.appendChild(document.createElement('div'));
+          let container = document.getElementById('main_news');
+          let jump = document.body.appendChild(document.createElement('article'));
 
           items.forEach(function (current, x) {
             let box = container.appendChild(document.createElement('news-preview')),
-              title = document.createAttribute("title");
+              title = document.createAttribute("title"),
+              image = document.createAttribute('image'),
+              date = document.createAttribute('date'),
+              author = document.createAttribute('author'),
+              text = document.createAttribute('text'),
+              link = document.createAttribute('link');
             let item = current;
             displayItem(item);
 
@@ -186,6 +214,11 @@ function addMainNews() {
               box.outerHTML = `<article></article>`;
               box = container.appendChild(document.createElement('news-preview'));
               title = document.createAttribute("title");
+              image = document.createAttribute("image");
+              date = document.createAttribute("date");
+              author = document.createAttribute("author");
+              text = document.createAttribute("text");
+              link = document.createAttribute("link");
             }
 
             previous.addEventListener('click', function () {
@@ -199,8 +232,16 @@ function addMainNews() {
             });
 
             function displayItem(item) {
-              title.value = item.data.title;
-              box.setAttributeNode(title);
+              title = item.data.title;
+              box.setAttribute('title',title);
+              /**/
+              image = item.data.thumbnail;
+              box.setAttribute('image',image);
+              /**/
+              link.value = item.data.url;
+              // box.setAttributeNode(link);
+              // console.log(item.data.permalink)
+              /**/
               previous.disabled = index <= 0;
               next.disabled = index >= data.length - 1;
             }
