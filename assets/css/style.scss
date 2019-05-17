@@ -84,14 +84,23 @@ header {
   color: $title;
   background: $main_color1;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
   .menu_btn {
     display: none;
     cursor: pointer;
     width: 40px;
     div {
+      -webkit-transition: all ease-in-out .2s;
+      -o-transition: all ease-in-out .2s;
       transition: all ease-in-out .2s;
       margin: 5px auto;
       width: 100%;
@@ -130,6 +139,7 @@ header {
       li {
         list-style: none;
         position: relative;
+        -ms-flex-preferred-size: 0;
         flex-basis: 0;
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -137,9 +147,17 @@ header {
         max-width: 100%;
         text-align: center;
         height: 60px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-transition: all ease-in-out .2s;
+        -o-transition: all ease-in-out .2s;
         transition: all ease-in-out .2s;
         &.active {
           &:after {
@@ -155,6 +173,8 @@ header {
           position: absolute;
           bottom: 0;
           left: 50%;
+          -webkit-transition: all ease-in-out .2s;
+          -o-transition: all ease-in-out .2s;
           transition: all ease-in-out .2s;
         }
         &:hover {
@@ -191,7 +211,8 @@ body {
 }
 
 .title {
-  margin: 40px 0;
+  margin-top: 120px;
+  margin-bottom: 60px;
   h1 {
     text-align: center;
     color: $title;
@@ -228,7 +249,11 @@ body {
     font-size: 10px;
     font-weight: 500;
     border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     border: 1px solid transparent;
     &:hover {
@@ -442,6 +467,7 @@ body {
 
 #slider {
   margin: 0 auto;
+  margin-bottom: 50px;
   width: 100%;
   overflow: hidden;
   .slider_heading {
@@ -468,7 +494,7 @@ body {
       .caption {
         margin: 0;
         position: absolute;
-        z-index: 100;
+        z-index: 1;
         bottom: -100px;
         left: 0;
         width: 100%;
