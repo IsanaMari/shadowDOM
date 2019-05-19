@@ -201,7 +201,7 @@ function addMainNews() {
           let index = 0,
             previous = document.querySelector('.previous'),
             next = document.querySelector('.next'),
-            count = 3;
+            count = 4;
           let items = data.slice(0, count);
           // let container = document.body.appendChild(document.createElement('div'));
           let container = document.getElementById('main_news');
@@ -237,10 +237,11 @@ function addMainNews() {
               link.value = item.data.url;
               box.setAttributeNode(link);
               /**/
-              let day = item.data.created.toLocaleString()
+              // let day = item.data.created.toTimeString()
               date.value = item.data.created;
+              let day = date.value;
               box.setAttributeNode(date);
-              console.log(day)
+              console.log(day, new Date().getTime())
               /**/
               previous.disabled = index <= 0;
               next.disabled = index >= data.length - 1;
