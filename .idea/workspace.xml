@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="082fbc32-7cd4-4f43-a907-ad01facc98b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/script.js" afterPath="$PROJECT_DIR$/assets/script.js" />
     </list>
@@ -29,17 +29,17 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="218" column="41" lean-forward="true" selection-start-line="218" selection-start-column="41" selection-end-line="218" selection-end-column="41" />
+            <state relative-caret-position="224">
+              <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
               <folding>
-                <marker date="1558292173833" expanded="true" signature="933:1906" ph="..." />
-                <marker date="1558292173833" expanded="true" signature="989:1139" ph="..." />
-                <marker date="1558292173833" expanded="true" signature="1015:1061" ph="..." />
-                <marker date="1558292173833" expanded="true" signature="1179:1891" ph="..." />
-                <marker date="1558292173833" expanded="true" signature="1223:1874" ph="..." />
-                <marker date="1558292173833" expanded="true" signature="1277:1351" ph="..." />
-                <marker date="1558292173833" expanded="true" signature="1403:1569" ph="..." />
-                <marker date="1558292173833" expanded="true" signature="1701:1855" ph="..." />
+                <marker date="1558293919936" expanded="true" signature="851:1824" ph="..." />
+                <marker date="1558293919936" expanded="true" signature="907:1057" ph="..." />
+                <marker date="1558293919936" expanded="true" signature="933:979" ph="..." />
+                <marker date="1558293919936" expanded="true" signature="1097:1809" ph="..." />
+                <marker date="1558293919936" expanded="true" signature="1141:1792" ph="..." />
+                <marker date="1558293919936" expanded="true" signature="1195:1269" ph="..." />
+                <marker date="1558293919936" expanded="true" signature="1321:1487" ph="..." />
+                <marker date="1558293919936" expanded="true" signature="1619:1773" ph="..." />
               </folding>
             </state>
           </provider>
@@ -49,7 +49,7 @@
         <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/code.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="200" selection-end-column="55" />
+              <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="200" selection-end-column="55" />
               <folding>
                 <marker date="1558291459624" expanded="true" signature="1364:2337" ph="..." />
                 <marker date="1558291459624" expanded="true" signature="1420:1570" ph="..." />
@@ -199,6 +199,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -232,7 +250,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../new/utrum" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Sass" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
@@ -337,7 +355,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85714000" />
+    <option name="totallyTimeSpent" value="87389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="742" extended-state="6" />
@@ -663,7 +681,7 @@
     <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/code.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="200" selection-end-column="55" />
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="200" selection-end-column="55" />
           <folding>
             <marker date="1558291459624" expanded="true" signature="1364:2337" ph="..." />
             <marker date="1558291459624" expanded="true" signature="1420:1570" ph="..." />
@@ -679,17 +697,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="218" column="41" lean-forward="true" selection-start-line="218" selection-start-column="41" selection-end-line="218" selection-end-column="41" />
+        <state relative-caret-position="224">
+          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
           <folding>
-            <marker date="1558292173833" expanded="true" signature="933:1906" ph="..." />
-            <marker date="1558292173833" expanded="true" signature="989:1139" ph="..." />
-            <marker date="1558292173833" expanded="true" signature="1015:1061" ph="..." />
-            <marker date="1558292173833" expanded="true" signature="1179:1891" ph="..." />
-            <marker date="1558292173833" expanded="true" signature="1223:1874" ph="..." />
-            <marker date="1558292173833" expanded="true" signature="1277:1351" ph="..." />
-            <marker date="1558292173833" expanded="true" signature="1403:1569" ph="..." />
-            <marker date="1558292173833" expanded="true" signature="1701:1855" ph="..." />
+            <marker date="1558293919936" expanded="true" signature="851:1824" ph="..." />
+            <marker date="1558293919936" expanded="true" signature="907:1057" ph="..." />
+            <marker date="1558293919936" expanded="true" signature="933:979" ph="..." />
+            <marker date="1558293919936" expanded="true" signature="1097:1809" ph="..." />
+            <marker date="1558293919936" expanded="true" signature="1141:1792" ph="..." />
+            <marker date="1558293919936" expanded="true" signature="1195:1269" ph="..." />
+            <marker date="1558293919936" expanded="true" signature="1321:1487" ph="..." />
+            <marker date="1558293919936" expanded="true" signature="1619:1773" ph="..." />
           </folding>
         </state>
       </provider>

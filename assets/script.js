@@ -1,37 +1,37 @@
 class NewsPreview extends HTMLElement {
-    constructor() {
-        super();
-        this.shadow = this.attachShadow({mode: 'open'});
-    }
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({mode: 'open'});
+  }
 
-    connectedCallback() {
-        this.createStyle()
-        this.createBody()
-    }
+  connectedCallback() {
+    this.createStyle()
+    this.createBody()
+  }
 
-    static get observedAttributes() {
-        return ['image', 'date', 'title', 'author', 'text', 'link']
-    }
+  static get observedAttributes() {
+    return ['image', 'date', 'title', 'author', 'text', 'link']
+  }
 
-    attributeChangedCallback(attrName, oldVal, newVal) {
-        this.setStyle()
-        this.setBody()
-    }
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    this.setStyle()
+    this.setBody()
+  }
 
-    createStyle() {
-        this.shadowStyles = document.createElement("style");
-        this.shadow.appendChild(this.shadowStyles);
-        this.shadowStyles.appendChild(document.createTextNode(``))
-    }
+  createStyle() {
+    this.shadowStyles = document.createElement("style");
+    this.shadow.appendChild(this.shadowStyles);
+    this.shadowStyles.appendChild(document.createTextNode(``))
+  }
 
-    createBody() {
-        this.shadowBody = document.createElement('section');
-        this.shadow.appendChild(this.shadowBody);
-        this.shadowBody.appendChild(document.createTextNode(``))
-    }
+  createBody() {
+    this.shadowBody = document.createElement('section');
+    this.shadow.appendChild(this.shadowBody);
+    this.shadowBody.appendChild(document.createTextNode(``))
+  }
 
-    setBody() {
-        let template = `
+  setBody() {
+    let template = `
       <div class="row main_news">
           <div class="col-lg-6 col-12 main_news_image">
             <div style="background: url(${this.getAttribute('image')})"></div>
@@ -56,11 +56,11 @@ class NewsPreview extends HTMLElement {
           </div>
         </div>
     `
-        this.shadowBody.innerHTML = template
-    }
+    this.shadowBody.innerHTML = template
+  }
 
-    setStyle() {
-        this.shadowStyles.textContent = `
+  setStyle() {
+    this.shadowStyles.textContent = `
                 .row{
                   display: -webkit-box;
                   display: -ms-flexbox;
@@ -79,15 +79,18 @@ class NewsPreview extends HTMLElement {
                   padding-left: 15px;
                   box-sizing: border-box;
                 }
+                .main_news{
+                  margin-bottom: 30px;
+                }
                 .main_news .main_news_image {
                     position: relative;
                 }
 
                 .main_news .main_news_image div {
                     position: relative;
-                    background-repeat: no-repeat;
+                    background-repeat: no-repeat !important;
                     width: 100%;
-                    background-size: 100%;
+                    background-size: 100% !important;
                 }
 
                 .main_news .main_news_image div:before {
@@ -183,7 +186,7 @@ class NewsPreview extends HTMLElement {
                     text-decoration: none;
                 }
                 `;
-    }
+  }
 }
 
 customElements.define('news-preview', NewsPreview);
@@ -225,10 +228,11 @@ function addMainNews() {
 
             function displayItem(item) {
               title = item.data.title;
-              box.setAttribute('title',title);
+              box.setAttribute('title', title);
               /**/
               image = item.data.thumbnail;
-              box.setAttribute('image',image);
+              image == 'self' ? box.setAttribute('image', `assets/img/angular.png`) :
+                box.setAttribute('image', image);
               /**/
               link.value = item.data.url;
               box.setAttributeNode(link);
