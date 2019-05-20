@@ -49,8 +49,8 @@ class NewsPreview extends HTMLElement {
               </div>
               <p class="main_news_content--text"><slot name="text"></slot></p>
               <div class="main_news_content--links">
-                <a href="#"><i class="fas fa-comments"></i>20</a>
-                <a href="#"><i class="far fa-thumbs-up"></i>17</a>
+                <a href="#">20</a>
+                <a href="#">17</a>
               </div>
             </div>
           </div>
@@ -231,17 +231,17 @@ function addMainNews() {
               box.setAttribute('title', title);
               /**/
               image = item.data.thumbnail;
-              image == 'self' ? box.setAttribute('image', `assets/img/angular.png`) :
+              image == 'self' || image == 'default' ? box.setAttribute('image', `assets/img/angular.png`) :
                 box.setAttribute('image', image);
               /**/
               link.value = item.data.url;
               box.setAttributeNode(link);
               /**/
-              // let day = item.data.created.toTimeString()
               date.value = item.data.created;
-              let day = date.value;
               box.setAttributeNode(date);
-              console.log(day, new Date().getTime())
+              /**/
+              author.value = item.data.author;
+              box.setAttributeNode(author)
               /**/
               previous.disabled = index <= 0;
               next.disabled = index >= data.length - 1;
