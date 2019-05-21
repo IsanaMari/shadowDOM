@@ -283,8 +283,21 @@ body {
   display: flex; }
   .carousel--selected {
     width: 65%; }
-    .carousel--selected img {
-      width: 100%; }
+    .carousel--selected div {
+      width: 100%;
+      object-fit: cover;
+      position: relative; }
+      .carousel--selected div:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 56.25%; }
+      .carousel--selected div > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
   .carousel--items {
     padding-left: 20px;
     width: 35%;
@@ -297,7 +310,7 @@ body {
       margin-bottom: 15px;
       cursor: pointer; }
       .carousel--items div img {
-        width: 100%;
+        width: 50%;
         padding-right: 10px; }
       .carousel--items div p {
         width: 50%; }

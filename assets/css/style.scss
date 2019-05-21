@@ -374,8 +374,11 @@ body {
   display: flex;
   &--selected {
     width: 65%;
-    img {
+    div {
       width: 100%;
+      object-fit: cover;
+      @include ratio(16,9);
+
     }
   }
   &--items {
@@ -391,7 +394,7 @@ body {
       cursor: pointer;
       //@include ratio(16,8);
       img {
-        width: 100%;
+        width: 50%;
         padding-right: 10px;
       }
       p {

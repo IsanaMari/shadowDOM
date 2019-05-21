@@ -10,11 +10,16 @@ headerNavBar()
 
 function opa() {
     let items = document.querySelectorAll('.carousel--items img'),
-        selected = document.querySelector('.carousel--selected img');
+        selected = document.querySelector('.carousel--selected div');
     items.forEach(function (currentValue, index) {
         let url = currentValue.src;
         currentValue.addEventListener('click', function (e) {
-            selected.src = this.src;
+            // selected.style.background = `url(${this.src})`;
+          selected.style = `
+            background-image: url("${this.src}");
+            background-repeat: no-repeat;
+            background-size: 100%;
+          `
         })
     })
 }

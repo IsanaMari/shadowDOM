@@ -193,7 +193,8 @@ customElements.define('news-preview', NewsPreview);
 // fetch('https://www.reddit.com/r/webdev.json')
 
 function addMainNews() {
-  fetch('https://www.reddit.com/r/angular.json')
+  // fetch('https://www.reddit.com/r/angular.json')
+  fetch('https://www.reddit.com/r/webdev.json')
     .then(response => {
       response.json().then(
         response => {
