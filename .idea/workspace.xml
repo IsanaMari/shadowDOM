@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="082fbc32-7cd4-4f43-a907-ad01facc98b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css.map" afterPath="$PROJECT_DIR$/assets/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.scss" afterPath="$PROJECT_DIR$/assets/css/style.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/script.js" afterPath="$PROJECT_DIR$/assets/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/style.js" afterPath="$PROJECT_DIR$/assets/style.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,17 +30,17 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="246" column="18" lean-forward="true" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="18" />
+            <state relative-caret-position="408">
+              <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
               <folding>
-                <marker date="1558446349318" expanded="true" signature="851:1716" ph="..." />
-                <marker date="1558446349318" expanded="true" signature="907:1057" ph="..." />
-                <marker date="1558446349318" expanded="false" signature="933:979" ph="..." />
-                <marker date="1558446349318" expanded="true" signature="1097:1701" ph="..." />
-                <marker date="1558446349318" expanded="true" signature="1141:1684" ph="..." />
-                <marker date="1558446349318" expanded="true" signature="1195:1269" ph="..." />
-                <marker date="1558446349318" expanded="true" signature="1321:1442" ph="..." />
-                <marker date="1558446349318" expanded="true" signature="1574:1665" ph="..." />
+                <marker date="1558446741044" expanded="true" signature="872:1811" ph="..." />
+                <marker date="1558446741044" expanded="true" signature="928:1078" ph="..." />
+                <marker date="1558446741044" expanded="false" signature="954:1000" ph="..." />
+                <marker date="1558446741044" expanded="true" signature="1118:1796" ph="..." />
+                <marker date="1558446741044" expanded="true" signature="1162:1779" ph="..." />
+                <marker date="1558446741044" expanded="true" signature="1216:1290" ph="..." />
+                <marker date="1558446741044" expanded="true" signature="1342:1463" ph="..." />
+                <marker date="1558446741044" expanded="true" signature="1595:1760" ph="..." />
               </folding>
             </state>
           </provider>
@@ -361,12 +356,12 @@
       <workItem from="1557954368287" duration="22555000" />
       <workItem from="1558025270412" duration="16763000" />
       <workItem from="1558372601684" duration="10481000" />
-      <workItem from="1558422486632" duration="18049000" />
+      <workItem from="1558422486632" duration="18431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117948000" />
+    <option name="totallyTimeSpent" value="118330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -705,17 +700,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="246" column="18" lean-forward="true" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="18" />
+        <state relative-caret-position="408">
+          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
           <folding>
-            <marker date="1558446349318" expanded="true" signature="851:1716" ph="..." />
-            <marker date="1558446349318" expanded="true" signature="907:1057" ph="..." />
-            <marker date="1558446349318" expanded="false" signature="933:979" ph="..." />
-            <marker date="1558446349318" expanded="true" signature="1097:1701" ph="..." />
-            <marker date="1558446349318" expanded="true" signature="1141:1684" ph="..." />
-            <marker date="1558446349318" expanded="true" signature="1195:1269" ph="..." />
-            <marker date="1558446349318" expanded="true" signature="1321:1442" ph="..." />
-            <marker date="1558446349318" expanded="true" signature="1574:1665" ph="..." />
+            <marker date="1558446741044" expanded="true" signature="872:1811" ph="..." />
+            <marker date="1558446741044" expanded="true" signature="928:1078" ph="..." />
+            <marker date="1558446741044" expanded="false" signature="954:1000" ph="..." />
+            <marker date="1558446741044" expanded="true" signature="1118:1796" ph="..." />
+            <marker date="1558446741044" expanded="true" signature="1162:1779" ph="..." />
+            <marker date="1558446741044" expanded="true" signature="1216:1290" ph="..." />
+            <marker date="1558446741044" expanded="true" signature="1342:1463" ph="..." />
+            <marker date="1558446741044" expanded="true" signature="1595:1760" ph="..." />
           </folding>
         </state>
       </provider>

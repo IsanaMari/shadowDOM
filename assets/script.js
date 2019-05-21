@@ -10,7 +10,7 @@ class NewsPreview extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['image', 'date', 'title', 'author', 'text', 'link']
+    return ['image', 'date', 'title', 'author', 'text', 'link', 'comments', 'score']
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
@@ -48,8 +48,8 @@ class NewsPreview extends HTMLElement {
               </div>
               <p class="main_news_content--text"><slot name="text"></slot></p>
               <div class="main_news_content--links">
-                <a href="#">20</a>
-                <a href="#">17</a>
+                <a href="#">Comments: ${this.getAttribute('comments')}</a>
+                <a href="#">Score: ${this.getAttribute('score')}</a>
               </div>
             </div>
           </div>
@@ -214,7 +214,9 @@ function addMainNews() {
               date = document.createAttribute('date'),
               author = document.createAttribute('author'),
               text = document.createAttribute('text'),
-              link = document.createAttribute('link');
+              link = document.createAttribute('link'),
+              comments = document.createAttribute('comments'),
+              score = document.createAttribute('score');
             let item = current;
             displayItem(item);
 
@@ -238,12 +240,19 @@ function addMainNews() {
               box.setAttributeNode(link);
               /**/
               let date_value = item.data.created,
-                day = new Date(parseInt(date_value)*1000);
+                day = new Date(parseInt(date_value) * 1000);
               date.value = day.toDateString();
               box.setAttributeNode(date);
               /**/
               author.value = item.data.author;
               box.setAttributeNode(author)
+              /**/
+              comments.value = item.data.num_comments;
+              box.setAttributeNode(comments)
+              /**/
+              score.value = item.data.score;
+              box.setAttributeNode(score)
+              console.log(item.data.score)
               /**/
               previous.disabled = index <= 0;
               next.disabled = index >= data.length - 1;
