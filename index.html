@@ -43,31 +43,28 @@
     <div class="col-md-12 title">
       <h1 class="bounceInLeft">Panda coder</h1>
     </div>
-    <div class="col-md-12">
-      <div class="heading heading_centered">
-        <p>latest news</p>
-        <div class="line"></div>
-      </div>
-    </div>
     <div class="col-md-4 col-12">
       <a href="#" class="trending_news">
-        <div class="trending_news--image">
+        <div class="trending_news--image" style="background-image: url(assets/img/javascript.jpg)">
           <div class="content">
           </div>
-          <p class="trending_news--date">27.10.95</p>
+          <p class="trending_news--date">25.04.2019</p>
         </div>
-        <a href="#" class="trending_news--category">web dev</a>
-        <p class="trending_news--title">Lorem lorem lorem lorem</p>
+        <a href="https://www.reddit.com/r/javascript/comments/bh6ill/javascript_is_and_remains_the_queen_of/"
+           class="trending_news--category">javascript</a>
+        <p class="trending_news--title">JavaScript is and remains the queen of programming languages with a community of
+          11.7M active developers. Python has reached 8.2M active developers and has taken the number two spot,
+          surpassing Java in terms of popularity.</p>
         <div class="trending_news--social">
-          <a href="#"><i class="fas fa-comments"></i>comments</a>
+          <a href="#"><i class="fas fa-comments"></i>601</a>
           <a href="#"><i class="fas fa-share-alt"></i>share</a>
-          <a href="#"><i class="far fa-thumbs-up"></i>likes</a>
+          <a href="#"><i class="far fa-thumbs-up"></i>182</a>
         </div>
       </a>
     </div>
     <div class="col-md-4 col-12">
       <a href="#" class="trending_news">
-        <div class="trending_news--image">
+        <div class="trending_news--image" style="background-image: url(assets/img/angular.png)">
           <div class="content">
           </div>
           <p class="trending_news--date">27.10.95</p>
@@ -167,6 +164,10 @@
       <div class="left_bar" id="main_news">
 
       </div>
+      <div class="main_news_btns">
+        <button class="previous"><i class="fas fa-angle-left"></i></button>
+        <button class="next"><i class="fas fa-angle-right"></i></button>
+      </div>
     </div>
     <div class="col-lg-4 col-md-5 col-12">
       <div class="right_bar">
@@ -233,12 +234,18 @@
   </div>
 </div>
 <footer>
-
+  <p>Copyright ©2019 All rights reserved
+  </p>
+  <nav>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Disclaimer</a></li>
+      <li><a href="#">Privacy</a></li>
+    </ul>
+  </nav>
 </footer>
-<div>
-  <button class="previous">previous</button>
-  <button class="next">next</button>
-</div>
+
 <script src="assets/script.js"></script>
 <script src="assets/style.js"></script>
 </body>

@@ -275,8 +275,9 @@ body {
 .trending_news {
   &--image {
     margin: 0;
-    background-image: url("https://picsum.photos/400/400/?random");
     @include ratio(16, 9);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
     .trending_news--date {
       position: absolute;
@@ -318,6 +319,9 @@ body {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   &--social {
     margin-bottom: 30px;
@@ -740,5 +744,62 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: normal;
     font-size: 16px;
+  }
+}
+.main_news_btns{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    &:disabled{
+      i{
+        color: $border;
+      }
+    }
+    i{
+      color: $main_color2;
+      font-size: 40px;
+      cursor: pointer;
+
+    }
+  }
+}
+footer{
+  background: #000;
+  margin-top: 30px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  p{
+    color: $border;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  nav{
+    ul{
+      li{
+        list-style: none;
+        display: inline-block;
+        a{
+          color: $border;
+        }
+      }
+    }
   }
 }

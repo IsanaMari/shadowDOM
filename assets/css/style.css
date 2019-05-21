@@ -193,8 +193,9 @@ body {
 
 .trending_news--image {
   margin: 0;
-  background-image: url("https://picsum.photos/400/400/?random");
-  position: relative; }
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
   .trending_news--image:before {
     display: block;
     content: " ";
@@ -241,7 +242,10 @@ body {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
 .trending_news--social {
   margin-bottom: 30px; }
   .trending_news--social a {
@@ -604,5 +608,49 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: normal;
     font-size: 16px; }
+
+.main_news_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .main_news_btns button {
+    background: transparent;
+    border: none;
+    cursor: pointer; }
+    .main_news_btns button:disabled i {
+      color: #4D5051; }
+    .main_news_btns button i {
+      color: #3CB878;
+      font-size: 40px;
+      cursor: pointer; }
+
+footer {
+  background: #000;
+  margin-top: 30px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  footer p {
+    color: #4D5051;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400; }
+  footer nav ul li {
+    list-style: none;
+    display: inline-block; }
+    footer nav ul li a {
+      color: #4D5051; }
 
 /*# sourceMappingURL=style.css.map */
