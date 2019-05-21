@@ -250,7 +250,6 @@ function addMainNews() {
               /**/
               score.value = item.data.score;
               box.setAttributeNode(score)
-              console.log(item.data.score)
               /**/
               previous.disabled = index <= 0;
               next.disabled = index >= data.length - 1;
@@ -299,3 +298,4 @@ class ProgressElement extends HTMLElement {
 }
 
 customElements.define('progress-element', ProgressElement);
+

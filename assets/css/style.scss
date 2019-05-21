@@ -775,7 +775,7 @@ body {
 footer{
   background: #000;
   margin-top: 30px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -793,13 +793,24 @@ footer{
   }
   nav{
     ul{
+      margin: 0;
+      padding:0;
       li{
         list-style: none;
         display: inline-block;
+        margin: 0;
+        padding: 0;
         a{
           color: $border;
+          margin-left: 15px;
+          &:hover{
+            color: $main_color1;
+          }
         }
       }
     }
   }
+}
+@media (min) {
+  
 }
