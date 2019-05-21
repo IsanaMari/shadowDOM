@@ -8,24 +8,6 @@ function headerNavBar() {
 }
 headerNavBar()
 
-function opa() {
-    let items = document.querySelectorAll('.carousel--items img'),
-        selected = document.querySelector('.carousel--selected div');
-    items.forEach(function (currentValue, index) {
-        let url = currentValue.src;
-        currentValue.addEventListener('click', function (e) {
-            // selected.style.background = `url(${this.src})`;
-          selected.style = `
-            background-image: url("${this.src}");
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-          `
-          this.parentNode.classList.toggle('active');
-        })
-    })
-}
-opa();
-
 function Slider( element ) {
     this.el = document.querySelector( element );
     this.init();
@@ -88,7 +70,7 @@ Slider.prototype = {
 };
 
 document.addEventListener( "DOMContentLoaded", function() {
-    var aSlider = new Slider( "#slider" );
+    var slider = new Slider( "#slider" );
 
 });
 

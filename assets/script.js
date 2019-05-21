@@ -189,10 +189,8 @@ class NewsPreview extends HTMLElement {
 }
 
 customElements.define('news-preview', NewsPreview);
-// fetch('https://www.reddit.com/r/webdev.json')
 
 function addMainNews() {
-  // fetch('https://www.reddit.com/r/angular.json')
   fetch('https://www.reddit.com/r/webdev.json')
     .then(response => {
       response.json().then(
@@ -262,6 +260,42 @@ function addMainNews() {
       )
     })
 }
-// num_comments
-// score
+
 addMainNews()
+
+class ProgressElement extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({mode: 'open'});
+    const style = shadow.appendChild(document.createElement('style'));
+    style.textContent = `
+            .wrapper{
+                width: 80%;
+                background-color: ${this.getAttribute('background')};
+                padding: 0px;
+                border-radius: 30px;
+                position: relative;
+                display: inline-block;
+            }
+            .progress {
+                width: ${this.getAttribute('width')}%;
+                height: ${this.getAttribute('height')}px;
+                background-color: ${this.getAttribute('color')};
+                border-radius: 50px;
+                position: relative;
+                margin: 0 0px;
+              }
+              @media (max-width: 991px){
+                .wrapper{
+                  width: 85%;
+                }
+              }
+        `
+    let wrapper = shadow.appendChild(document.createElement('div'));
+    wrapper.classList.add('wrapper');
+    let progress = wrapper.appendChild(document.createElement('div'));
+    progress.classList.add('progress');
+  }
+}
+
+customElements.define('progress-element', ProgressElement);
