@@ -106,7 +106,7 @@ el.forEach(function (current, index) {
 })
 var myEfficientFn = debounce(function () {
   el.forEach(function (current, index) {
-    current.getBoundingClientRect().y <= window.scrollY ? current.classList.add('bounceInLeft') : null
+    current.getBoundingClientRect().y <= window.scrollY ? current.classList.add('bounceInUp') : null
   })
 
 }, 150);
