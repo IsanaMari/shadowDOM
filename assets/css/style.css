@@ -286,7 +286,8 @@ body {
     .carousel--selected div {
       width: 100%;
       object-fit: cover;
-      position: relative; }
+      position: relative;
+      background-size: 100% 100%; }
       .carousel--selected div:before {
         display: block;
         content: " ";
@@ -304,16 +305,28 @@ body {
     color: #fff;
     font-size: 12px; }
     .carousel--items div {
+      position: relative;
       display: flex;
-      justify-content: center;
       align-items: flex-start;
       margin-bottom: 15px;
       cursor: pointer; }
+      .carousel--items div.active {
+        border-left: 2px solid #DB4437; }
       .carousel--items div img {
-        width: 50%;
-        padding-right: 10px; }
-      .carousel--items div p {
         width: 50%; }
+      .carousel--items div p {
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #00000090;
+        color: #fff;
+        font-size: 14px;
+        margin: 0;
+        padding: 10px;
+        text-transform: capitalize; }
+        .carousel--items div p:hover {
+          text-decoration: underline; }
 
 .left_bar {
   border: 1px solid #393c3d;

@@ -18,8 +18,9 @@ function opa() {
           selected.style = `
             background-image: url("${this.src}");
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: 100% 100%;
           `
+          this.parentNode.classList.toggle('active');
         })
     })
 }

@@ -43,8 +43,7 @@ class NewsPreview extends HTMLElement {
                 <h2>${this.getAttribute('title')}</h2>
               </a>
               <div class="main_news_content--date">
-                <span>posted by</span>
-                <i class="fas fa-circle"></i>
+                <span>posted by:</span>
                 <span>${this.getAttribute('author')}</span>
               </div>
               <p class="main_news_content--text"><slot name="text"></slot></p>
@@ -238,7 +237,9 @@ function addMainNews() {
               link.value = item.data.url;
               box.setAttributeNode(link);
               /**/
-              date.value = item.data.created;
+              let date_value = item.data.created,
+                day = new Date(parseInt(date_value)*1000);
+              date.value = day.toDateString();
               box.setAttributeNode(date);
               /**/
               author.value = item.data.author;
@@ -252,7 +253,56 @@ function addMainNews() {
       )
     })
 }
-
+// num_comments
+// score
 addMainNews()
 
 
+/**/
+class CurrentNews extends HTMLElement {
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({mode: 'open'});
+  }
+
+  connectedCallback() {
+    this.createStyle()
+    this.createBody()
+  }
+
+  static get observedAttributes() {
+    return ['image', 'date', 'title', 'author', 'text', 'link']
+  }
+
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    this.setStyle()
+    this.setBody()
+  }
+
+  createStyle() {
+    this.shadowStyles = document.createElement("style");
+    this.shadow.appendChild(this.shadowStyles);
+    this.shadowStyles.appendChild(document.createTextNode(``))
+  }
+
+  createBody() {
+    this.shadowBody = document.createElement('section');
+    this.shadow.appendChild(this.shadowBody);
+    this.shadowBody.appendChild(document.createTextNode(``))
+  }
+
+  setBody() {
+    let template = `
+    
+    `
+    this.shadowBody.innerHTML = template
+  }
+
+  setStyle() {
+    this.shadowStyles.textContent = `
+
+                `;
+  }
+}
+
+customElements.define('current-news', CurrentNews);
